@@ -17,9 +17,9 @@ namespace Zadanie5_OSK
         public NoweOkno2()
         {
             InitializeComponent();
-            xt = true;
-            xw = false;
-            xs = false;
+            lock1 = true;
+            first_timer = false;
+            lock2 = false;
             i = 0;
             Ts = 350;
             Ts2 = 700;
@@ -38,28 +38,28 @@ namespace Zadanie5_OSK
             this.Close();
         }
 
-        public double srednia(double a,double b, double c, double d, double e)
+        public double average(double a,double b, double c)
         {
-            double S = (a + b + c + d + e) / 5;
+            double S = (a + b + c) / 3;
             return S;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (xs == false) {
+            if (lock2 == false) {
                 this.button1.Visible = false;
                 Random rnd1 = new Random();
-                this.LiczbaLosowa = rnd1.Next(500, 5000);
-                this.timer1.Interval = this.LiczbaLosowa;
+                this.random_number = rnd1.Next(500, 5000);
+                this.timer1.Interval = this.random_number;
                 this.timer1.Start();
-                xs = true;
+                lock2 = true;
             }
             else
             {
                 this.button1.Visible = false;
                 Random rnd1 = new Random();
-                this.LiczbaLosowa = rnd1.Next(500, 5000);
-                this.timer1.Interval = this.LiczbaLosowa;
+                this.random_number = rnd1.Next(500, 5000);
+                this.timer1.Interval = this.random_number;
                 this.timer1.Start();
                 this.button2.BackColor = Color.White;
             }
@@ -68,33 +68,33 @@ namespace Zadanie5_OSK
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            if (xt == true)
+            if (lock1 == true)
             {
-                this.button2.BackColor = Color.Blue;
+                this.button2.BackColor = Color.Red;
                 this.start = DateTime.Now;
                 this.timer1.Stop();
-                xt = false;
+                lock1 = false;
                 this.button1.Text = "Kontynuuj";
 
             }
             else
             {
-                SystemSounds.Asterisk.Play();
+                SystemSounds.Exclamation.Play();
                 //Console.Beep();
                 this.start = DateTime.Now;
                 this.timer1.Stop();
-                xt = true;
+                lock1 = true;
                 this.button1.Text = "Kontynuuj";
             }
-            xw = true;
+            first_timer = true;
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            if (xw == true)
+            if (first_timer == true)
             {
                 this.label5.Text = " ";
-                if (i <= 9)
+                if (i <= 5)
                 {
                     this.button1.Visible = true;
                     DateTime stop = DateTime.Now;
@@ -132,7 +132,7 @@ namespace Zadanie5_OSK
                             Tmind = T[i];
                         }
                     }
-                    Console.WriteLine("{0,12}", this.LiczbaLosowa);
+                    Console.WriteLine("{0,12}", this.random_number);
                     Console.WriteLine("{0,12}", T[i]);
                     i++;
                 }
@@ -143,21 +143,17 @@ namespace Zadanie5_OSK
                     this.chart1.Series["Czasy"].Points.AddXY(1, Convert.ToDouble(T[0]));
                     this.chart1.Series["Czasy"].Points.AddXY(2, Convert.ToDouble(T[2]));
                     this.chart1.Series["Czasy"].Points.AddXY(3, Convert.ToDouble(T[4]));
-                    this.chart1.Series["Czasy"].Points.AddXY(4, Convert.ToDouble(T[6]));
-                    this.chart1.Series["Czasy"].Points.AddXY(5, Convert.ToDouble(T[8]));
                     this.chart1.Visible = true;
                     this.chart2.Enabled = true;
                     this.chart2.Series["Czasy"].Points.AddXY(1, Convert.ToDouble(T[1]));
                     this.chart2.Series["Czasy"].Points.AddXY(2, Convert.ToDouble(T[3]));
                     this.chart2.Series["Czasy"].Points.AddXY(3, Convert.ToDouble(T[5]));
-                    this.chart2.Series["Czasy"].Points.AddXY(4, Convert.ToDouble(T[7]));
-                    this.chart2.Series["Czasy"].Points.AddXY(5, Convert.ToDouble(T[9]));
                     this.chart2.Visible = true;
                     this.label6.Text = "Najszybszy czas reakcji na bodźce wzrokowe: " + Tminw + " ms";
                     this.label7.Text = "Najwolniejszy czas reakcji na bodźce wzrokowe: " + Tmaxw + " ms";
                     this.label8.Text = "Najszybszy czas reakcji na bodźce dźwiękowe: " + Tmind + " ms";
                     this.label9.Text = "Najwolniejszy czas reakcji na bodźce dźwiękowe: " + Tmaxd + " ms";
-                    S1 = srednia(T[0], T[2], T[4], T[6], T[8]);
+                    S1 = average(T[0], T[2], T[4]);
                     if (S1<=Ts)
                     {
                         this.label10.Text = "Twój średni czas jest lepszy od średniego \n czasu reakcji dla przeciętnego człowieka";
@@ -169,7 +165,7 @@ namespace Zadanie5_OSK
                     {
                         this.label10.Text = "Twój średni czas jest gorszy od średniego \n czasu reakcji dla przeciętnego człowieka";
                     }
-                    S2 = srednia(T[1], T[3], T[5], T[7], T[9]);
+                    S2 = average(T[1], T[3], T[5]);
                     if (S2 <= Ts)
                     {
                         this.label11.Text = "Twój średni czas jest lepszy od średniego \n czasu reakcji dla przeciętnego człowieka";
@@ -183,7 +179,7 @@ namespace Zadanie5_OSK
                         this.label11.Text = "Twój średni czas jest gorszy od średniego \n czasu reakcji dla przeciętnego człowieka";
                     }
                 }
-                xw = false;
+                first_timer = false;
             }
             else
             {

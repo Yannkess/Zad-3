@@ -120,15 +120,13 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Instrukcja:
 Test składa się z dwóch części:
-1. Część zapoznawcza - w tej części można zobaczyć jak będzie wyglądał test. Ta część nie jest oceniana.
-2. Część właściwa - test.
+1. Część zapoznawcza  (Nie jest oceniana).
+2. Część właściwa (Podlega ocenie).
 
 Test będzie sprawdzał szybkość reakcji na dźwięki i obrazy.
 
 Przebieg testu:
-Na ekranie będzie się zmieniać kolor przycisku albo będzie odtworzony dźwięk. W takim momencie należy 
-niezwłocznie nacisnąć przycisk. Zostanie dokonany pomiar czasu. Następnie należy kliknąć "Kontynuuj'
-Po 10 pomiarach test zakończy się.
+Test składa się z 6 pomiarów, które będą badać naszą reakcję na zmianę koloru przycisku, bądź na sygnał dźwiękowy.
 
 Po teście właściwym podane zostaną wyniki: najszybszy czas reakcji, najwolniejszy czas reakcji oraz wykres.</value>
   </data>

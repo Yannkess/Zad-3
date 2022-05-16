@@ -19,37 +19,33 @@ namespace Zadanie5_OSK
         public NoweOkno()
         {
             InitializeComponent();
-            xt = true;
-            xw = false;
-            xs = false;
+            lock1 = true;
+            first_timer = false;
+            lock2 = false;
             i = 0;
             this.chart1.Visible = false;
             this.chart2.Visible = false;
         }
-        public void onePing()
-        {
-            SystemSounds.Beep.Play();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (xs == false)
+            if (lock2 == false)
             {
                 this.button1.Text = " ";
                 this.button1.Visible = false;
                 Random rnd1 = new Random();
-                this.LiczbaLosowa = rnd1.Next(500, 5000);
-                this.timer1.Interval = this.LiczbaLosowa;
+                this.random_number = rnd1.Next(500, 5000);
+                this.timer1.Interval = this.random_number;
                 this.timer1.Start();
-                xs = true;
+                lock2 = true;
             }
             else
             {
                 this.button1.Text = " ";
                 this.button1.Visible = false;
                 Random rnd1 = new Random();
-                this.LiczbaLosowa = rnd1.Next(500, 5000);
-                this.timer1.Interval = this.LiczbaLosowa;
+                this.random_number = rnd1.Next(500, 5000);
+                this.timer1.Interval = this.random_number;
                 this.timer1.Start();
                 this.button2.BackColor = Color.White;
             }
@@ -57,33 +53,33 @@ namespace Zadanie5_OSK
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (xt == true)
+            if (lock1 == true)
             {
-                this.button2.BackColor = Color.Blue;
+                this.button2.BackColor = Color.Red;
                 this.start = DateTime.Now;
                 this.timer1.Stop();
-                xt = false;
+                lock1 = false;
                 this.button1.Text = "Kontynuuj";
                 
             }
             else
             {
-                SystemSounds.Asterisk.Play();
+                SystemSounds.Exclamation.Play();
                 //Console.Beep();
                 this.start = DateTime.Now;
                 this.timer1.Stop();
-                xt = true; ;
+                lock1 = true; ;
                 this.button1.Text = "Kontynuuj";
             }
-            xw = true;
+            first_timer = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (xw == true)
+            if (first_timer == true)
             {
                 this.label5.Text = " ";
-                if (i <= 9)
+                if (i <= 5)
                 {
                     this.button1.Visible = true;
                     DateTime stop = DateTime.Now;
@@ -99,7 +95,7 @@ namespace Zadanie5_OSK
                     {
                         T[i] = time;
                     }
-                    Console.WriteLine("{0,12}", this.LiczbaLosowa);
+                    Console.WriteLine("{0,12}", this.random_number);
                     Console.WriteLine("{0,12}", T[i]);
                     i++;
                 }
@@ -110,18 +106,14 @@ namespace Zadanie5_OSK
                     this.chart1.Series["Czasy"].Points.AddXY(1, Convert.ToDouble(T[0]));
                     this.chart1.Series["Czasy"].Points.AddXY(2, Convert.ToDouble(T[2]));
                     this.chart1.Series["Czasy"].Points.AddXY(3, Convert.ToDouble(T[4]));
-                    this.chart1.Series["Czasy"].Points.AddXY(4, Convert.ToDouble(T[6]));
-                    this.chart1.Series["Czasy"].Points.AddXY(5, Convert.ToDouble(T[8]));
                     this.chart1.Visible = true;
                     this.chart2.Enabled = true;
                     this.chart2.Series["Czasy"].Points.AddXY(1, Convert.ToDouble(T[1]));
                     this.chart2.Series["Czasy"].Points.AddXY(2, Convert.ToDouble(T[3]));
                     this.chart2.Series["Czasy"].Points.AddXY(3, Convert.ToDouble(T[5]));
-                    this.chart2.Series["Czasy"].Points.AddXY(4, Convert.ToDouble(T[7]));
-                    this.chart2.Series["Czasy"].Points.AddXY(5, Convert.ToDouble(T[9]));
                     this.chart2.Visible = true;
                 }
-                xw = false;
+                first_timer = false;
             }
             else
             {

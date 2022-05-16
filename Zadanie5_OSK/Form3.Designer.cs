@@ -8,12 +8,12 @@ namespace Zadanie5_OSK
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private int LiczbaLosowa;
+        private int random_number;
         private Stopwatch sw = new Stopwatch();
         private DateTime start = new DateTime();
-        private bool xt;
-        private bool xw;
-        private bool xs;
+        private bool lock1;
+        private bool first_timer;
+        private bool lock2;
         private int i;
         private double Tmaxw;
         private double Tminw;
@@ -87,9 +87,9 @@ namespace Zadanie5_OSK
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(419, 13);
-            this.chart2.Margin = new System.Windows.Forms.Padding(4);
+            this.chart2.Location = new System.Drawing.Point(304, -2);
             this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
             series1.EmptyPointStyle.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series1.EmptyPointStyle.IsValueShownAsLabel = true;
@@ -97,7 +97,7 @@ namespace Zadanie5_OSK
             series1.Legend = "Legend1";
             series1.Name = "Czasy";
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(416, 369);
+            this.chart2.Size = new System.Drawing.Size(312, 300);
             this.chart2.TabIndex = 19;
             this.chart2.Text = "chart2";
             title1.Name = "Title1";
@@ -115,10 +115,9 @@ namespace Zadanie5_OSK
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(380, 552);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(285, 448);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
             this.button3.Text = "Zakończ";
             this.button3.UseVisualStyleBackColor = true;
@@ -130,9 +129,9 @@ namespace Zadanie5_OSK
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(-5, 13);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4);
+            this.chart1.Location = new System.Drawing.Point(-4, -2);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series2.ChartArea = "ChartArea1";
             series2.EmptyPointStyle.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             series2.EmptyPointStyle.IsValueShownAsLabel = true;
@@ -140,7 +139,7 @@ namespace Zadanie5_OSK
             series2.Legend = "Legend1";
             series2.Name = "Czasy";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(449, 369);
+            this.chart1.Size = new System.Drawing.Size(337, 300);
             this.chart1.TabIndex = 17;
             this.chart1.Text = "chart1";
             title4.IsDockedInsideChartArea = false;
@@ -159,29 +158,26 @@ namespace Zadanie5_OSK
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(261, 280);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(89, 77);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 17);
+            this.label5.Size = new System.Drawing.Size(10, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = " ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(501, 236);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(379, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 17);
+            this.label4.Size = new System.Drawing.Size(12, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "s";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 114);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(12, 93);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(805, 97);
+            this.button2.Size = new System.Drawing.Size(604, 165);
             this.button2.TabIndex = 14;
             this.button2.Text = "Naciśnij";
             this.button2.UseVisualStyleBackColor = true;
@@ -190,42 +186,38 @@ namespace Zadanie5_OSK
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(343, 236);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(273, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "0,00 ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 236);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(234, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Czas:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(104, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(591, 17);
+            this.label1.Size = new System.Drawing.Size(443, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Po zmianie koloru drugiego przycisku albo po usłyszeniu dźwięku przycisku naciśni" +
     "j przycisk.";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(282, 67);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(260, 282);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 39);
+            this.button1.Size = new System.Drawing.Size(118, 83);
             this.button1.TabIndex = 10;
             this.button1.Text = "Rozpocznij";
             this.button1.UseVisualStyleBackColor = false;
@@ -238,56 +230,62 @@ namespace Zadanie5_OSK
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 401);
+            this.label6.Location = new System.Drawing.Point(9, 326);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 417);
+            this.label7.Location = new System.Drawing.Point(9, 339);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 21;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(444, 401);
+            this.label8.Location = new System.Drawing.Point(333, 326);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 17);
+            this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 22;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(444, 417);
+            this.label9.Location = new System.Drawing.Point(333, 339);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 17);
+            this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 466);
+            this.label10.Location = new System.Drawing.Point(9, 379);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 17);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(444, 466);
+            this.label11.Location = new System.Drawing.Point(333, 379);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 17);
+            this.label11.Size = new System.Drawing.Size(0, 13);
             this.label11.TabIndex = 25;
             // 
             // NoweOkno2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 593);
+            this.ClientSize = new System.Drawing.Size(620, 482);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -304,7 +302,10 @@ namespace Zadanie5_OSK
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NoweOkno2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test właściwy";
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
