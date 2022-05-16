@@ -1,0 +1,37 @@
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe.config
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.pdb
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csprojAssemblyReference.cache
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Properties.Resources.resources
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.GenerateResource.cache
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.CoreCompileInputs.cache
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.exe
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.pdb
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno.resources
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Instrukcja.resources
+C:\Users\natal\source\repos\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno2.resources
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe.config
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.pdb
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.AssemblyReference.cache
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.SuggestedBindingRedirects.cache
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Instrukcja.resources
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno.resources
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno2.resources
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Properties.Resources.resources
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.GenerateResource.cache
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.CoreCompileInputs.cache
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.exe
+C:\Users\Paweł\Desktop\UCZELNIA\OSK-lab\OSK-lab-od Witka\Zadanie5_OSK\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.pdb
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe.config
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.exe
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\bin\Debug\Zadanie5_OSK.pdb
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.AssemblyReference.cache
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Instrukcja.resources
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno.resources
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.NoweOkno2.resources
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.Properties.Resources.resources
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.GenerateResource.cache
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.csproj.CoreCompileInputs.cache
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.exe
+F:\Studia\Semestr 6\OSK\Gotowiec Zad 3\Zadanie5_OSK\obj\Debug\Zadanie5_OSK.pdb
