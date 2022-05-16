@@ -170,7 +170,7 @@ namespace Zadanie5_OSK
                     {
                         this.label11.Text = "Twój średni czas jest lepszy od średniego \n czasu reakcji dla przeciętnego człowieka";
                     }
-                    else if (S1 <= Ts2)
+                    else if (S2 <= Ts2)
                     {
                         this.label11.Text = "Twój średni czas reakcji mieści się w przedziale średniego \n czasu reakcji dla przeciętnego człowieka";
                     }
